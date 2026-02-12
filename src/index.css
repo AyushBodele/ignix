@@ -1,0 +1,411 @@
+/* ============================= */
+/* GOOGLE + CDN FONTS */
+/* ============================= */
+@import url("https://fonts.cdnfonts.com/css/general-sans");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@import "tailwindcss";
+
+/* ============================= */
+/* FONT VARIABLES (TAILWIND v4) */
+/* ============================= */
+@layer base {
+  :root {
+    --font-bebas: "Bebas Neue", sans-serif;
+    --font-general: "General Sans", sans-serif;
+    --font-founders-grotesk: "FoundersGrotesk", sans-serif;
+  }
+}
+
+/* ============================= */
+/* GLOBAL STYLES */
+/* ============================= */
+body {
+  width: 100dvw;
+  overflow-x: hidden;
+  /* background-color: #f9f4eb; */
+  font-family: var(--font-general);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* ============================= */
+/* LOCAL FONT FACES */
+/* ============================= */
+@layer base {
+  @font-face {
+    font-family: "mono-medium";
+    src: url("/fonts/mono-medium.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "narrow-semibold";
+    src: url("/fonts/narrow-semibold.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "robert-medium";
+    src: url("/fonts/robert-medium.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "normal-medium";
+    src: url("/fonts/normal-medium.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Poppins-medium";
+    src: url("/fonts/Poppins-medium.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  /* 🔥 FOUNDERS GROTESK */
+  @font-face {
+    font-family: "FoundersGrotesk";
+    src: url("/fonts/FoundersGrotesk-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+/* ============================= */
+/* INTRO ACTION LINE ANIMATION */
+/* ============================= */
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(2); }
+}
+
+/* Trigger wave animation on hover of the parent wrapper */
+.intro_action-line-wrap:hover .intro-line {
+  animation: wave 0.5s ease-in-out infinite;
+}
+
+/* Optional: smoother scaling for each line */
+.intro-line {
+  transform-origin: bottom; /* Scale from bottom like a sound wave */
+}
+/* Container - Full viewport, no scroll */
+/* Container - Full viewport, no scroll */
+.marketecture-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #000428 0%, #001840 50%, #004e92 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 3rem);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add subtle background pattern */
+.marketecture-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-image: radial-gradient(circle at 2px 2px, rgba(0, 240, 255, 0.05) 1px, transparent 0); */
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* SVG fills viewport while maintaining aspect ratio */
+.marketecture-diagram {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hexagon sections - Interactive areas */
+.hexagon-section {
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  fill-opacity: 0.2;
+}
+
+.hexagon-section:hover {
+  fill-opacity: 0.4;
+  filter: brightness(1) drop-shadow(0 0 20px rgba(0, 240, 255, 0.6));
+}
+
+.section-link {
+  text-decoration: none;
+  outline: none;
+}
+
+/* Hexagon outline glow - KEPT */
+.hexagon-outline {
+  filter: drop-shadow(0 0 8px rgba(4, 5, 5, 0.228));
+}
+
+/* Animated connection lines - GLOW KEPT */
+.connect-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawLine 2s ease forwards;
+  filter: drop-shadow(0 0 4px rgba(2, 2, 2, 0.6));
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Pulsing dots animation - GLOW KEPT */
+.line-dot,
+.connector-dot,
+.sensor-dot {
+  animation: pulse 2s ease-out infinite;
+  filter: drop-shadow(0 0 6px rgba(11, 12, 12, 0.8));
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+/* Responsive text sizing based on viewport - GLOW KEPT */
+.label-text {
+  font-family: var(--font-general);
+  font-size: clamp(14px, 1.8vw, 25px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  /* fill: #ffffff; */
+  /* text-shadow: 0 0 10px rgba(19, 23, 23, 0.3); */
+}
+
+/* Center label - GLOW REMOVED */
+.center-label {
+  font-family: var(--font-general);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  /* fill: #ffffff; */
+  /* No text-shadow for center label */
+}
+
+.small-label {
+  font-family: var(--font-general);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  fill: #ffffff;
+  font-size: clamp(10px, 1.2vw, 16.5px);
+}
+
+.cyan-label {
+  font-family: var(--font-general);
+  font-size: clamp(14px, 1.8vw, 25px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  fill: #00f0ff;
+  /* text-shadow: 0 0 10px rgba(0, 240, 255, 0.6); */
+}
+
+.sensor-title {
+  font-family: var(--font-general);
+  font-weight: 700;
+  fill: #00f0ff;
+  /* text-shadow: 0 0 10px rgba(0, 240, 255, 0.6); */
+}
+
+.sensor-label {
+  font-family: var(--font-general);
+  fill: #ffffff;
+}
+
+.curved-text {
+  font-family: var(--font-general);
+  font-size: clamp(14px, 1.8vw, 25px);
+  font-weight: 700;
+  fill: #ffffff;
+  letter-spacing: 0.15em;
+  /* text-shadow: 0 0 15px rgba(0, 240, 255, 0.5); */
+}
+
+/* Sensor connection lines - GLOW KEPT */
+.sensor-line {
+  opacity: 1;
+  filter: drop-shadow(0 0 3px rgba(0, 240, 255, 0.4));
+}
+
+/* Arrows with hover effects */
+.connector-arrow,
+.sensor-arrow {
+  transition: all 0.3s ease;
+  fill: #00005c;
+}
+
+.connector-dot:hover ~ .connector-arrow,
+.sensor-dot:hover ~ .sensor-arrow {
+  fill: #00f0ff;
+}
+
+/* Interactive hover effects */
+.hexagon-section:hover ~ .labels .label-text {
+  fill: #00f0ff;
+  transition: fill 0.3s ease;
+}
+
+/* Stagger animation for dots */
+.line-dot:nth-child(1) { animation-delay: 0s; }
+.line-dot:nth-child(2) { animation-delay: 0.2s; }
+.line-dot:nth-child(3) { animation-delay: 0.4s; }
+.line-dot:nth-child(4) { animation-delay: 0.6s; }
+.line-dot:nth-child(5) { animation-delay: 0.8s; }
+
+/* Fade-in animation for entire diagram */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.marketecture-diagram {
+  animation: fadeIn 1s ease-out;
+}
+
+/* ============================= */
+/* RESPONSIVE BREAKPOINTS */
+/* ============================= */
+
+/* Tablet landscape */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .marketecture-container {
+    padding: clamp(0.5rem, 2vw, 1.5rem);
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) and (orientation: portrait) {
+  .marketecture-container {
+    height: 100svh; /* Use small viewport height on mobile */
+    padding: 1rem;
+  }
+
+  .marketecture-diagram {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Mobile landscape - prioritize width */
+@media (max-width: 768px) and (orientation: landscape) {
+  .marketecture-container {
+    height: 100vh;
+    padding: 0.5rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .marketecture-container {
+    height: 100svh;
+    padding: 0.5rem;
+  }
+
+  .label-text {
+    font-size: clamp(10px, 3vw, 14px);
+  }
+}
+
+/* ============================= */
+/* ASPECT RATIO PRESERVATION */
+/* ============================= */
+
+/* Ensure diagram maintains aspect ratio */
+@supports (aspect-ratio: 1327.43 / 1152.9) {
+  .marketecture-diagram {
+    aspect-ratio: 1327.43 / 1152.9;
+    object-fit: contain;
+  }
+}
+
+/* ============================= */
+/* ACCESSIBILITY */
+/* ============================= */
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .connect-line,
+  .line-dot,
+  .connector-dot,
+  .sensor-dot,
+  .marketecture-diagram {
+    animation: none;
+  }
+
+  .hexagon-section,
+  .connector-arrow,
+  .sensor-arrow {
+    transition: none;
+  }
+}
+
+/* Focus visible for keyboard navigation */
+.section-link:focus-visible {
+  outline: 2px solid #00f0ff;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .label-text,
+  .center-label,
+  .cyan-label {
+    text-shadow: none;
+  }
+
+  .hexagon-section {
+    stroke-width: 2px;
+  }
+}
+
+/* Print styles - fit to one page */
+@media print {
+  .marketecture-container {
+    background: white;
+    height: 100vh;
+    page-break-inside: avoid;
+  }
+
+  .marketecture-container::before {
+    display: none;
+  }
+
+  @page {
+    size: auto;
+    margin: 10mm;
+  }
+}

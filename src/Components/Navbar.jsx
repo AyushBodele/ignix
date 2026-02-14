@@ -116,7 +116,7 @@ const Header = () => {
             onMouseEnter={() => setActiveMenu(activeMenu)}
             onMouseLeave={() => setActiveMenu(null)}
           >
-            <MegaMenu active={activeMenu} />
+            <MegaMenu active={activeMenu} onClose={() => setActiveMenu(null)} />
           </div>
         )}
       </div>

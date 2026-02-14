@@ -190,3 +190,82 @@ export const slides = [
   },
 ];
 
+export const servicesSlides = [
+  {
+    tag: "01 / Cyber Security",
+    title: "Cyber Security",
+    description:
+      "Protect your digital assets with enterprise-grade security solutions. We defend your infrastructure against evolving threats, data breaches, and cyberattacks with cutting-edge tools and expertise.",
+    bullets: [
+      "Threat Detection & Response",
+      "Network Security Monitoring",
+      "Vulnerability Assessment",
+      "Penetration Testing",
+      "Incident Response Planning",
+      "Zero Trust Architecture",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=700&q=80",
+    accent: "from-red-500/20",
+    accentSolid: "bg-red-600",
+    textAccent: "text-red-600",
+  },
+  {
+    tag: "02 / Digital Marketing",
+    title: "Digital Marketing",
+    description:
+      "Supercharge your brand's online presence with data-driven digital marketing strategies that drive real engagement, generate leads, and deliver measurable ROI.",
+    bullets: [
+      "Social Media Campaigns",
+      "Content Strategy & Creation",
+      "Email Marketing Automation",
+      "Pay-Per-Click Advertising",
+      "Brand Identity & Storytelling",
+      "Analytics & Performance Tracking",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80",
+    accent: "from-purple-600/20",
+    accentSolid: "bg-purple-600",
+    textAccent: "text-purple-600",
+  },
+  {
+    tag: "03 / SEO",
+    title: "Search Engine Optimization",
+    description:
+      "Rank higher, get found faster. Our SEO specialists craft tailored strategies that boost organic visibility, drive qualified traffic, and grow your business sustainably.",
+    bullets: [
+      "Technical SEO Audits",
+      "Keyword Research & Strategy",
+      "On-Page Optimization",
+      "Link Building Campaigns",
+      "Local SEO & Google Maps",
+      "Core Web Vitals Optimization",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=700&q=80",
+    accent: "from-emerald-600/20",
+    accentSolid: "bg-emerald-600",
+    textAccent: "text-emerald-600",
+  },
+  {
+    tag: "04 / Web Development",
+    title: "Web Development",
+    description:
+      "From pixel-perfect designs to high-performance applications, we build modern, scalable websites and web apps that deliver exceptional user experiences across every device.",
+    bullets: [
+      "Custom Website Design & Build",
+      "React / Next.js Development",
+      "E-Commerce Solutions",
+      "CMS Integration",
+      "API Development & Integration",
+      "Performance & Speed Optimization",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700&q=80",
+    accent: "from-blue-600/20",
+    accentSolid: "bg-blue-600",
+    textAccent: "text-blue-600",
+  },
+];
+

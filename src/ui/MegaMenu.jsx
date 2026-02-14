@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 import { menuData } from "../utils/menuData";
 
-const MegaMenu = ({ active }) => {
+const MegaMenu = ({ active, onClose }) => {
   const data = menuData[active];
 
   if (!data) return null;
@@ -13,27 +14,29 @@ const MegaMenu = ({ active }) => {
     <div className="w-[1200px] bg-[#f3f4f6] rounded-2xl shadow-2xl p-10 flex gap-12">
 
       {/* LEFT MENU */}
-      <div className="w-1/4 space-y-3">
-        {data.sections.map((item, index) => {
-          const Icon = item.icon;
-          return (
-            <div
-              key={index}
-              onMouseEnter={() => setActiveSection(item)}
-              className={`p-4 rounded-lg cursor-pointer transition flex items-center gap-3
-                ${activeSection.title === item.title
-                  ? "bg-blue-200 font-semibold"
-                  : "hover:bg-blue-100"}`}
-            >
-              {Icon && <Icon className="w-5 h-5" />}
-              <span>{item.title}</span>
-            </div>
-          );
-        })}
-      </div>
+      {active !== "solutions" && (
+        <div className="w-1/4 space-y-3">
+          {data.sections.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={index}
+                onMouseEnter={() => setActiveSection(item)}
+                className={`p-4 rounded-lg cursor-pointer transition flex items-center gap-3
+                  ${activeSection.title === item.title
+                    ? "bg-blue-200 font-semibold"
+                    : "hover:bg-blue-100"}`}
+              >
+                {Icon && <Icon className="w-5 h-5" />}
+                <span>{item.title}</span>
+              </div>
+            );
+          })}
+        </div>
+      )}
 
       {/* CENTER CONTENT */}
-      <div className="w-2/4">
+      <div className={active === "solutions" ? "w-3/4" : "w-2/4"}>
         {/* Dynamic title/description */}
         <h2 className="text-3xl font-bold text-black leading-snug mb-6">
           {activeSection.sectionTitle || data.title}
@@ -49,8 +52,8 @@ const MegaMenu = ({ active }) => {
             {activeSection.features.map((feature, i) => {
               const FeatureIcon = feature.icon;
               return (
-                <div 
-                  key={i} 
+                <div
+                  key={i}
                   className="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center"
                 >
                   {FeatureIcon && (
@@ -75,10 +78,13 @@ const MegaMenu = ({ active }) => {
           <div className="grid grid-cols-2 gap-4">
             {data.sections.map((item, i) => {
               const Icon = item.icon;
+              const Wrapper = item.path ? Link : 'div';
+              const wrapperProps = item.path ? { to: item.path, onClick: onClose } : {};
+
               return (
-                <div key={i} className="flex flex-col p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <Wrapper key={i} {...wrapperProps} className="flex flex-col p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="p-1.5 bg-blue-100 rounded-lg">
+                    <div className="p-1.5 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition">
                       {Icon && <Icon className="w-4 h-4 text-blue-600" />}
                     </div>
                     <h3 className="text-blue-600 font-semibold text-sm">
@@ -93,7 +99,7 @@ const MegaMenu = ({ active }) => {
                       {item.ctaText} <FiArrowRight className="w-2.5 h-2.5" />
                     </button>
                   )}
-                </div>
+                </Wrapper>
               );
             })}
           </div>

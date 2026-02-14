@@ -143,7 +143,8 @@ export const menuData = {
         description: "Teams use AI securely while protecting sensitive data.",
         sectionTitle: "Ignix Safe AI Adoption",
         sectionDescription: "Secure your AI implementations while maintaining data protection and compliance.",
-        ctaText: "Secure AI →"
+        ctaText: "Secure AI →",
+        path: "/solutions/safe-ai"
       },
       {
         title: "M365 Security",
@@ -151,7 +152,8 @@ export const menuData = {
         description: "Advanced defenses for Microsoft 365 and collaboration platforms.",
         sectionTitle: "Ignix M365 & Workspace Security",
         sectionDescription: "Comprehensive security for Microsoft 365 and modern collaboration tools.",
-        ctaText: "Protect Workspace →"
+        ctaText: "Protect Workspace →",
+        path: "/solutions/m365-security"
       },
       {
         title: "Ransomware Defense",
@@ -159,7 +161,8 @@ export const menuData = {
         description: "Stops attacks early to limit damage and spread.",
         sectionTitle: "Ignix Ransomware Prevention",
         sectionDescription: "Proactive defense and rapid response against ransomware attacks.",
-        ctaText: "Prevent Attacks →"
+        ctaText: "Prevent Attacks →",
+        path: "/solutions/ransomware-defense"
       },
       {
         title: "Email Protection",
@@ -167,7 +170,8 @@ export const menuData = {
         description: "Guards against phishing, malware, and account takeovers.",
         sectionTitle: "Ignix Email & Cloud Protection",
         sectionDescription: "Complete email security and comprehensive cloud protection.",
-        ctaText: "Secure Email →"
+        ctaText: "Secure Email →",
+        path: "/solutions/email-protection"
       },
       {
         title: "Cloud App Security",
@@ -175,7 +179,8 @@ export const menuData = {
         description: "Secures SaaS tools and prevents data leaks.",
         sectionTitle: "Ignix Cloud App Safeguards",
         sectionDescription: "Protection for SaaS applications and cloud-based tools.",
-        ctaText: "Secure SaaS →"
+        ctaText: "Secure SaaS →",
+        path: "/solutions/cloud-app-security"
       },
       {
         title: "Security Training",
@@ -183,7 +188,8 @@ export const menuData = {
         description: "Builds skills to spot and report threats quickly.",
         sectionTitle: "Ignix Employee Awareness Training",
         sectionDescription: "Comprehensive security awareness and training programs.",
-        ctaText: "Train Team →"
+        ctaText: "Train Team →",
+        path: "/solutions/security-training"
       },
     ],
 

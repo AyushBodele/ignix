@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import SecurityCards from "../ui/SecurityCards";
-import AnimatedCards from "./AnimatedCards";
 import { useHeadingAnimation } from "../hooks/heroAnimation";
 import HeroCarouselItem from "../carousel/HeroCarouselItem";
 import {slides} from "../utils/Data";
+import CyberHero from "../ui/CyberHero";
+import ServicesCarousel from "../carousel/ServicesCarousel";
+import AboutSection from "./Aboutsection";
 
 const Hero = () => {
   const headingVariants = useHeadingAnimation();
@@ -25,9 +26,10 @@ const Hero = () => {
         slideIndex={currentSlide}   // 
       />
 
-      {/* ANIMATED CARDS (UNCHANGED) */}
       <div>
-        <AnimatedCards />
+        <CyberHero/>
+        <AboutSection/>
+        <ServicesCarousel/>
       </div>
     </div>
   );

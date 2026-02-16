@@ -19,7 +19,7 @@ import ServicesCarousel from "./carousel/ServicesCarousel.jsx"
 
 function LandingPage() {
   return (
-    <>
+    <div className="w-full max-w-[100vw] mx-auto overflow-x-hidden">
       <Hero />
       <CyberHero />
       <AboutSection />
@@ -27,9 +27,10 @@ function LandingPage() {
       <OutroSection />
       <PlatformSection />
       <IndustrySection />
-    </>
-  )
+    </div>
+  );
 }
+
 
 import { ConsultationProvider } from "./components/ConsultationContext.jsx"
 

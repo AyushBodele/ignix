@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "../ui/Dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/Dialog";
 import ConsultationForm from "./services/ConsultationForm.jsx";
 
 const ConsultationContext = createContext({
@@ -17,13 +17,9 @@ export function ConsultationProvider({ children }) {
     <ConsultationContext.Provider value={{ openConsultation }}>
       {children}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto bg-white">
+        <DialogContent className="sm:max-w-[600px] bg-white h-[98vh] overflow-hidden">
           <DialogHeader>
-            <DialogTitle className="text-2xl">Book Your Free Consultation</DialogTitle>
-            <DialogDescription>
-              Fill out the form below and our team will get back to you within 24 hours to discuss your project
-              needs.
-            </DialogDescription>
+            <DialogTitle className="text-xl">Book Your Free Consultation</DialogTitle>
           </DialogHeader>
           <ConsultationForm onSuccess={() => setIsOpen(false)} />
         </DialogContent>

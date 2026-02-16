@@ -38,7 +38,7 @@ const leadership = [
 
 export default function Company() {
   return (
-    <div className="min-h-screen bg-[#f5f2ea] text-slate-900">
+    <div className="min-h-screen bg-[#f5f2ea] text-slate-900 font-robert-medium">
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-slate-200">
         <div className="pointer-events-none absolute inset-0">
@@ -48,12 +48,12 @@ export default function Company() {
 
         <div className="relative mx-auto flex max-w-6xl flex-col gap-14 px-4 py-20 sm:px-8 sm:py-24 lg:flex-row lg:items-center">
           <div className="max-w-xl space-y-6">
-            <p className="inline-flex items-center gap-2 rounded-full border border-slate-300/70 bg-white/70 px-4 py-1 text-[15px] font-semibold uppercase tracking-[0.2em] text-slate-800">
+            <p className="inline-flex items-center gap-2 rounded-full border border-slate-300/70 bg-white/70 px-4 py-1 text-[15px] font-semibold font-robert-medium uppercase tracking-[0.2em] text-slate-800">
               <ShieldCheck className="h-7 w-7" />
               Ignix Social — Company
             </p>
 
-            <h1 className="text-4xl leading-tight sm:text-5xl lg:text-[3.4rem] lg:leading-[1.05]">
+            <h1 className="text-4xl leading-tight sm:text-5xl font-robert-medium lg:text-[3.3rem] lg:leading-[1.05]">
               We build calm, secure{" "}
               <span className="bg-[linear-gradient(120deg,#0f172a,#0369a1)] bg-clip-text text-transparent">
                 digital ecosystems

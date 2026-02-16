@@ -14,10 +14,10 @@
 /* ============================= */
 /* GLOBAL STYLES */
 /* ============================= */
+html,
 body {
   width: 100%;
   overflow-x: hidden;
-  /* background-color: #f9f4eb; */
   font-family: var(--font-general);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

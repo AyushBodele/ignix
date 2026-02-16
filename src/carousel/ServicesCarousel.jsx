@@ -31,16 +31,16 @@ export default function ServicesCarousel() {
   const slide = servicesSlides[current];
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 sm:p-6 py-16 bg-slate-100 font-sans overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center p-4 sm:p-6 py-16 bg-slate-100 overflow-hidden">
       <div className="w-full max-w-5xl flex flex-col gap-6 sm:gap-8">
 
         {/* Section Heading */}
         <div className="text-center px-4">
-          <p className={`text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-2 ${slide.textAccent}`}>
+          <p className={`text-[10px] sm:text-xs font-bold font-robert-medium uppercase tracking-widest mb-2 ${slide.textAccent}`}>
             What We Offer
           </p>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight font-serif">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight font-robert-medium">
             Services We Provide
           </h1>
 
@@ -85,7 +85,7 @@ export default function ServicesCarousel() {
 
             {/* Text Panel */}
             <div className="flex-1 flex flex-col justify-center gap-4">
-              <h2 className={`text-2xl lg:text-3xl font-extrabold leading-snug font-serif ${slide.textAccent}`}>
+              <h2 className={`text-2xl lg:text-3xl font-bold leading-snug font-robert-medium ${slide.textAccent}`}>
                 {slide.title}
               </h2>
 

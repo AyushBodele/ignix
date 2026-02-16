@@ -62,9 +62,9 @@ export default function ConsultationForm({ onSuccess }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-6 bg-white rounded-3xl shadow-xl border border-slate-100 px-6 py-7 sm:px-8 sm:py-8"
+      className="space-y-3 bg-white rounded-3xl shadow-xl border border-slate-100 sm:px-8 sm:py-5"
     >
-      <div className="space-y-4">
+      <div className="space-y-3.5">
         <div>
           <Label htmlFor="name">Full Name *</Label>
           <Input
@@ -158,7 +158,7 @@ export default function ConsultationForm({ onSuccess }) {
         >
           {isSubmitting ? 'Submitting...' : 'Book My Free Consultation'}
         </Button>
-        <p className="text-xs text-muted-foreground text-center mt-3">
+        <p className="text-xs text-muted-foreground text-center mt-2">
           By submitting this form, you agree to our privacy policy and terms of service.
         </p>
       </div>

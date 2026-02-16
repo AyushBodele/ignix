@@ -20,10 +20,35 @@ const CircularText = ({
   spinDuration = 20,
   onHover = "speedUp",
   className = "",
+  radius: propRadius,
 }) => {
   const letters = Array.from(text);
   const controls = useAnimation();
   const rotation = useMotionValue(0);
+
+  // Responsive radius calculation
+  const [radius, setRadius] = React.useState(propRadius || 120);
+
+  useEffect(() => {
+    if (propRadius) {
+      setRadius(propRadius);
+      return;
+    }
+
+    const updateRadius = () => {
+      if (window.innerWidth < 640) {
+        setRadius(80); // Mobile
+      } else if (window.innerWidth < 768) {
+        setRadius(100); // Tablet
+      } else {
+        setRadius(120); // Desktop
+      }
+    };
+
+    updateRadius();
+    window.addEventListener("resize", updateRadius);
+    return () => window.removeEventListener("resize", updateRadius);
+  }, [propRadius]);
 
   useEffect(() => {
     const start = rotation.get();
@@ -49,12 +74,9 @@ const CircularText = ({
     });
   };
 
-  /* 🔧 KEY FIX: radius reduced so it stays inside container */
-  const radius = 120;
-
   return (
     <motion.div
-      className={`relative flex items-center justify-center rounded-full overflow-hidden ${className}`}
+      className={`relative flex items-center justify-center rounded-full overflow-visible ${className}`}
       style={{ rotate: rotation }}
       animate={controls}
       onMouseEnter={handleHoverStart}
@@ -69,9 +91,10 @@ const CircularText = ({
         return (
           <span
             key={i}
-            className="absolute text-white font-extrabold text-xl md:text-2xl"
+            className="absolute text-white font-extrabold text-lg sm:text-xl md:text-2xl whitespace-pre"
             style={{
-              transform: `translate(${x}px, ${y}px) rotate(${angle}deg)`,
+              transform: `translate(${x}px, ${y}px) rotate(${angle + 90}deg)`,
+              transformOrigin: 'center',
             }}
           >
             {letter}

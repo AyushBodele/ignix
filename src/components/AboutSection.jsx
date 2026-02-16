@@ -94,12 +94,12 @@ const AboutSection = () => {
         </div>
 
         {/* Right Side */}
-        <div className="relative flex items-center justify-center w-full md:w-[420px] lg:w-[480px] h-[300px] sm:h-[360px] md:h-full mt-10 md:mt-0 overflow-hidden">
+        <div className="relative flex items-center justify-center w-full md:w-[420px] lg:w-[480px] h-[250px] sm:h-[360px] md:h-full mt-10 md:mt-0">
           <CircularText
             text="WELCOME*TO*IGNIX*SOCIAL*"
             spinDuration={17}
             onHover="speedUp"
-            className="w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[360px] md:h-[360px]"
+            className="w-full h-full"
           />
         </div>
       </div>

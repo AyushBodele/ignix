@@ -6,7 +6,7 @@ const HeroCarouselItem = ({ slideIndex, slide }) => {
   if (!slide) return null;
 
   return (
-    <section className="relative w-full h-[100svh] min-h-[600px] lg:h-[117vh] overflow-hidden">
+    <section className="relative w-[100vw] h-[100svh] min-h-[600px] lg:h-[117vh] overflow-hidden">
       {/* BACKGROUND IMAGE */}
       <img
         src={slide.image}
@@ -14,8 +14,9 @@ const HeroCarouselItem = ({ slideIndex, slide }) => {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
+
       {/* HERO CONTENT */}
-      <div className="relative z-10 max-w-6xl mx-auto pt-32 sm:pt-40 md:pt-48 lg:pt-58 px-6 lg:px-0 lg:ml-33 text-center sm:text-left font-robert-medium">
+      <div className="relative z-10 max-w-6xl mx-auto pt-32 sm:pt-40 md:pt-48 lg:pt-58 px-6 lg:px-0 lg:ml-33 text-center sm:text-left">
         <h1 className="
           text-white
           text-3xl sm:text-4xl md:text-5xl lg:text-5xl

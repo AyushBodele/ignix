@@ -31,13 +31,13 @@ const Chatbot = () => {
     };
 
     return (
-        <div className="fixed bottom-6 right-24 z-[100] font-sans">
+        <div className="fixed bottom-24 sm:bottom-6 right-6 sm:right-[88px] z-[100] font-sans">
             {/* Chatbot Toggle Button */}
             <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={toggleChat}
-                className="bg-[#004e92] text-cyan-400 p-4 rounded-full shadow-2xl flex items-center justify-center border border-cyan-400/30 backdrop-blur-md"
+                className="bg-[#004e92] text-cyan-400 w-14 h-14 rounded-full shadow-2xl flex items-center justify-center border border-cyan-400/30 backdrop-blur-md"
                 aria-label="Open Chatbot"
             >
                 {isOpen ? <X size={28} /> : <MessageSquare size={28} />}
@@ -90,8 +90,8 @@ const Chatbot = () => {
                                             {msg.sender === 'user' ? <User size={14} /> : <Bot size={14} />}
                                         </div>
                                         <div className={`p-3 rounded-2xl text-sm ${msg.sender === 'user'
-                                                ? 'bg-cyan-500/20 text-white border border-cyan-500/30 rounded-tr-none'
-                                                : 'bg-white/5 text-white/90 border border-white/10 rounded-tl-none'
+                                            ? 'bg-cyan-500/20 text-white border border-cyan-500/30 rounded-tr-none'
+                                            : 'bg-white/5 text-white/90 border border-white/10 rounded-tl-none'
                                             }`}>
                                             {msg.text}
                                         </div>

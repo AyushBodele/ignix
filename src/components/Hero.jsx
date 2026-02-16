@@ -26,11 +26,7 @@ const Hero = () => {
         slideIndex={currentSlide}   // 
       />
 
-      <div>
-        <CyberHero />
-        <AboutSection />
-        <ServicesCarousel />
-      </div>
+      
     </div>
   );
 };

@@ -13,12 +13,17 @@ import ScrollToTop from "./hooks/ScrollToTop.jsx"
 import WhatsAppButton from "./components/WhatsAppButton.jsx"
 import Chatbot from "./components/Chatbot.jsx"
 import OutroSection from "./components/OutroSection.jsx"
-
+import CyberHero from "./ui/CyberHero.jsx"
+import AboutSection from "./components/AboutSection.jsx"
+import ServicesCarousel from "./carousel/ServicesCarousel.jsx"
 
 function LandingPage() {
   return (
     <>
       <Hero />
+      <CyberHero />
+      <AboutSection />
+      <ServicesCarousel />
       <OutroSection />
       <PlatformSection />
       <IndustrySection />

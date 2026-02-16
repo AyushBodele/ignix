@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiX, FiChevronRight, FiArrowUpRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { navItems, menuData } from "../utils/menuData.js";
-import { useConsultation } from "../components/ConsultationContext.jsx";
 
 const routeMap = {
     services: "/services",
@@ -16,7 +15,6 @@ const routeMap = {
 
 const MobileSidebar = ({ isOpen, onClose }) => {
     const navigate = useNavigate();
-    const { openConsultation } = useConsultation();
     const [expandedKey, setExpandedKey] = useState(null);
 
     useEffect(() => {
@@ -90,21 +88,22 @@ const MobileSidebar = ({ isOpen, onClose }) => {
                         aria-label="Navigation menu"
                         initial={{ x: "100%" }}
                         animate={{ x: 0 }}
-                        exit={{ x: "100%" }}
+                        exit={{ x: "calc(100% + 16px)" }}
                         transition={{ type: "spring", damping: 28, stiffness: 240 }}
                         style={{
                             position: "fixed",
-                            top: 0,
-                            bottom: 0,
-                            right: 0,
-                            zIndex: 9999,          /* above backdrop, above everything */
-                            width: "100%",
-                            maxWidth: "320px",
+                            top: "70px",
+                            bottom: "16px",
+                            right: "12px",
+                            zIndex: 9999,
+                            width: "calc(100% - 24px)",
+                            maxWidth: "310px",
                             display: "flex",
                             flexDirection: "column",
                             backgroundColor: "#ffffff",
-                            boxShadow: "-8px 0 48px rgba(0,0,0,0.14)",
-                            borderLeft: "1px solid #e8f0fe",
+                            boxShadow: "0 8px 40px rgba(0,0,0,0.18), 0 2px 8px rgba(37,99,235,0.08)",
+                            border: "1px solid #e8f0fe",
+                            borderRadius: "20px",
                             overflow: "hidden",
                         }}
                     >
@@ -342,7 +341,7 @@ const MobileSidebar = ({ isOpen, onClose }) => {
                         {/* ── FOOTER CTAs ── */}
                         <div style={{
                             flexShrink: 0,
-                            padding: "16px 22px 28px",
+                            padding: "14px 22px 20px",
                             borderTop: "1px solid #f0f4ff",
                             backgroundColor: "#ffffff",
                             display: "flex",
@@ -352,7 +351,7 @@ const MobileSidebar = ({ isOpen, onClose }) => {
                             <motion.button
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.97 }}
-                                onClick={() => { onClose(); openConsultation(); }}
+                                onClick={() => handleNavigation(null, "/#contact")}
                                 style={{
                                     width: "100%",
                                     padding: "14px 20px",

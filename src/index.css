@@ -15,12 +15,17 @@
 /* GLOBAL STYLES */
 /* ============================= */
 body {
-  width: 100dvw;
+  width: 100%;
   overflow-x: hidden;
   /* background-color: #f9f4eb; */
   font-family: var(--font-general);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.no-horizontal-scroll {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 button {
@@ -35,8 +40,15 @@ button:disabled {
 /* INTRO ACTION LINE ANIMATION */
 /* ============================= */
 @keyframes wave {
-  0%, 100% { transform: scaleY(1); }
-  50% { transform: scaleY(2); }
+
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(2);
+  }
 }
 
 /* Trigger wave animation on hover of the parent wrapper */
@@ -46,8 +58,10 @@ button:disabled {
 
 /* Optional: smoother scaling for each line */
 .intro-line {
-  transform-origin: bottom; /* Scale from bottom like a sound wave */
+  transform-origin: bottom;
+  /* Scale from bottom like a sound wave */
 }
+
 /* Container - Full viewport, no scroll */
 /* Container - Full viewport, no scroll */
 .marketecture-container {
@@ -131,10 +145,13 @@ button:disabled {
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.6;
     transform: scale(1.2);
@@ -211,23 +228,37 @@ button:disabled {
   fill: #00005c;
 }
 
-.connector-dot:hover ~ .connector-arrow,
-.sensor-dot:hover ~ .sensor-arrow {
+.connector-dot:hover~.connector-arrow,
+.sensor-dot:hover~.sensor-arrow {
   fill: #00f0ff;
 }
 
 /* Interactive hover effects */
-.hexagon-section:hover ~ .labels .label-text {
+.hexagon-section:hover~.labels .label-text {
   fill: #00f0ff;
   transition: fill 0.3s ease;
 }
 
 /* Stagger animation for dots */
-.line-dot:nth-child(1) { animation-delay: 0s; }
-.line-dot:nth-child(2) { animation-delay: 0.2s; }
-.line-dot:nth-child(3) { animation-delay: 0.4s; }
-.line-dot:nth-child(4) { animation-delay: 0.6s; }
-.line-dot:nth-child(5) { animation-delay: 0.8s; }
+.line-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.line-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.line-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.line-dot:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.line-dot:nth-child(5) {
+  animation-delay: 0.8s;
+}
 
 /* Fade-in animation for entire diagram */
 @keyframes fadeIn {
@@ -235,6 +266,7 @@ button:disabled {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -259,13 +291,18 @@ button:disabled {
 /* Tablet portrait */
 @media (max-width: 768px) and (orientation: portrait) {
   .marketecture-container {
-    height: 100svh; /* Use small viewport height on mobile */
-    padding: 1rem;
+    height: auto;
+    min-height: 100svh;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .marketecture-diagram {
     width: 100%;
     height: auto;
+    max-height: 70vh;
   }
 }
 
@@ -307,6 +344,7 @@ button:disabled {
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
+
   .connect-line,
   .line-dot,
   .connector-dot,
@@ -331,6 +369,7 @@ button:disabled {
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
+
   .label-text,
   .center-label,
   .cyan-label {

@@ -31,28 +31,28 @@ export default function ServicesCarousel() {
   const slide = servicesSlides[current];
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6 py-16 bg-slate-100 font-sans">
-      <div className="w-full max-w-5xl flex flex-col gap-8">
+    <div className="min-h-screen flex items-center justify-center p-4 sm:p-6 py-16 bg-slate-100 font-sans overflow-hidden">
+      <div className="w-full max-w-5xl flex flex-col gap-6 sm:gap-8">
 
         {/* Section Heading */}
-        <div className="text-center">
-          <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${slide.textAccent}`}>
+        <div className="text-center px-4">
+          <p className={`text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-2 ${slide.textAccent}`}>
             What We Offer
           </p>
 
-          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight font-serif">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight font-serif">
             Services We Provide
           </h1>
 
           <div className={`mx-auto mt-3 h-1 w-14 rounded-full ${slide.accentSolid}`} />
 
-          <p className="text-gray-500 mt-4 text-sm lg:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="text-gray-500 mt-4 text-xs sm:text-sm lg:text-base max-w-xl mx-auto leading-relaxed">
             We deliver end-to-end digital solutions tailored to help your business grow, stay secure, and stand out online.
           </p>
         </div>
 
         {/* Carousel Card */}
-        <div className="relative rounded-3xl shadow-xl border border-slate-200 bg-white p-8 min-h-[360px] overflow-hidden">
+        <div className="relative rounded-3xl shadow-xl border border-slate-200 bg-white p-6 sm:p-8 min-h-[300px] sm:min-h-[360px] overflow-hidden mx-2 sm:mx-0">
 
           {/* Accent radial gradient */}
           <div
@@ -61,16 +61,16 @@ export default function ServicesCarousel() {
 
           {/* Slide Content */}
           <div
-            className={`flex flex-col md:flex-row items-stretch gap-12 transition-all duration-300 ${animating
-                ? direction === "right"
-                  ? "opacity-0 -translate-x-7"
-                  : "opacity-0 translate-x-7"
-                : "opacity-100 translate-x-0"
+            className={`flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-12 transition-all duration-300 ${animating
+              ? direction === "right"
+                ? "opacity-0 -translate-x-7"
+                : "opacity-0 translate-x-7"
+              : "opacity-100 translate-x-0"
               }`}
           >
             {/* Image Panel */}
-            <div className="md:w-80 flex-shrink-0">
-              <div className="relative overflow-hidden rounded-2xl min-h-[280px]">
+            <div className="w-full md:w-80 flex-shrink-0">
+              <div className="relative overflow-hidden rounded-2xl h-48 sm:h-64 md:h-full min-h-[200px] sm:min-h-[280px]">
                 <img
                   src={slide.image}
                   alt={slide.title}
@@ -124,8 +124,8 @@ export default function ServicesCarousel() {
               key={i}
               onClick={() => goTo(i)}
               className={`transition-all duration-300 rounded-full ${i === current
-                  ? `w-8 h-2 ${slide.accentSolid}`
-                  : "w-2.5 h-2.5 bg-gray-300"
+                ? `w-8 h-2 ${slide.accentSolid}`
+                : "w-2.5 h-2.5 bg-gray-300"
                 }`}
             />
           ))}

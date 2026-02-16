@@ -6,7 +6,7 @@ const HeroCarouselItem = ({ slideIndex, slide }) => {
   if (!slide) return null;
 
   return (
-    <section className="relative w-full h-[117vh] overflow-hidden">
+    <section className="relative w-full h-[100svh] min-h-[600px] lg:h-[117vh] overflow-hidden">
       {/* BACKGROUND IMAGE */}
       <img
         src={slide.image}
@@ -15,13 +15,14 @@ const HeroCarouselItem = ({ slideIndex, slide }) => {
       />
 
       {/* HERO CONTENT */}
-      <div className="relative z-10 max-w-6xl mx-auto pt-58 font-robert-medium ml-33">
+      <div className="relative z-10 max-w-6xl mx-auto pt-32 sm:pt-40 md:pt-48 lg:pt-58 px-6 lg:px-0 lg:ml-33 text-center sm:text-left font-robert-medium">
         <h1 className="
           text-white
-          text-2xl sm:text-3xl md:text-5xl
+          text-3xl sm:text-4xl md:text-5xl lg:text-5xl
           font-semibold
           leading-tight
           max-w-full sm:max-w-lg md:max-w-xl
+          mx-auto sm:mx-0
           break-words
         ">
           {slide.title}{" "}
@@ -32,21 +33,23 @@ const HeroCarouselItem = ({ slideIndex, slide }) => {
 
         <p className="
           text-gray-200
-          text-base sm:text-lg md:text-xl
-          mt-6
+          text-sm sm:text-lg md:text-xl
+          mt-4 sm:mt-6
           max-w-full sm:max-w-xl md:max-w-2xl
+          mx-auto sm:mx-0
         ">
           {slide.description}
         </p>
 
         <button className="
-          mt-10
+          mt-8 sm:mt-10
           inline-flex items-center gap-3
           bg-white text-black
           px-6 py-3
           rounded-full
           font-semibold
           whitespace-nowrap
+          hover:bg-emerald-50 transition-colors
         ">
           {slide.cta}
           <ArrowRight className="w-5 h-5" />

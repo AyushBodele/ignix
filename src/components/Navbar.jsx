@@ -16,14 +16,14 @@ const Header = () => {
   return (
     <header className="fixed inset-x-0 top-0 z-50 w-full border-b border-gray-300 bg-[#f3f4f6]/95 backdrop-blur-md font-sans">
       {/* ===== Top Bar ===== */}
-      <div className="bg-[#d9e1ef] text-xs font-bold">
+      <div className="bg-[#d9e1ef] text-[10px] sm:text-xs font-bold">
         <div className="w-full flex justify-between items-center px-4 sm:px-8 lg:px-20 py-2">
           <div className="flex items-center gap-1 text-gray-700">
             <span className="font-semibold uppercase">IN:</span>
             <span>English: Indian</span>
           </div>
 
-          <div className="flex items-center gap-6 text-gray-700">
+          <div className="hidden sm:flex items-center gap-4 lg:gap-6 text-gray-700">
             <button
               className="flex items-center gap-1 hover:text-blue-600 transition"
               aria-label="Search"

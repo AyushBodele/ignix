@@ -14,6 +14,7 @@ import WhatsAppButton from './Components/WhatsAppButton'
 import Chatbot from './Components/Chatbot'
 import OutroSection from './Components/OutroSection'
 
+
 function LandingPage() {
   return (
     <>

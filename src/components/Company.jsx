@@ -48,7 +48,7 @@ export default function Company() {
 
         <div className="relative mx-auto flex max-w-6xl flex-col gap-14 px-4 py-20 sm:px-8 sm:py-24 lg:flex-row lg:items-center">
           <div className="max-w-xl space-y-6">
-            <p className="inline-flex items-center gap-2 rounded-full border border-slate-300/70 bg-white/70 px-4 py-1 text-[15px] font-semibold uppercase tracking-[0.2em] text-slate-700">
+            <p className="inline-flex items-center gap-2 rounded-full border border-slate-300/70 bg-white/70 px-4 py-1 text-[15px] font-semibold uppercase tracking-[0.2em] text-slate-800">
               <ShieldCheck className="h-7 w-7" />
               Ignix Social — Company
             </p>

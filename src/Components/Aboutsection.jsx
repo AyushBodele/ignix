@@ -1,6 +1,7 @@
 import React from "react";
 import CircularText from "../hooks/CircularText";
-import { useConsultation } from "./ConsultationContex";
+import { useConsultation } from "./ConsultationContext";
+
 import { Button } from "../ui/Button"; // adjust path if needed
 
 const AboutSection = () => {

@@ -1,14 +1,22 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 import { menuData } from "../utils/menuData.js";
 
 const MegaMenu = ({ active, onClose }) => {
   const data = menuData[active];
+  const navigate = useNavigate();
 
   if (!data) return null;
 
   const [activeSection, setActiveSection] = useState(data.sections[0]);
+
+  // Reset active section when menu category changes
+  useEffect(() => {
+    if (data?.sections?.length > 0) {
+      setActiveSection(data.sections[0]);
+    }
+  }, [active, data]);
 
   return (
     <div className="w-[1200px] bg-[#f3f4f6] rounded-2xl shadow-2xl p-10 flex gap-12">
@@ -22,6 +30,15 @@ const MegaMenu = ({ active, onClose }) => {
               <div
                 key={index}
                 onMouseEnter={() => setActiveSection(item)}
+                onClick={() => {
+                  if (active === "services") {
+                    onClose();
+                    navigate("/services");
+                  } else if (active === "company") {
+                    onClose();
+                    navigate("/company");
+                  }
+                }}
                 className={`p-4 rounded-lg cursor-pointer transition flex items-center gap-3
                   ${activeSection.title === item.title
                     ? "bg-blue-200 font-semibold"
@@ -121,10 +138,17 @@ const MegaMenu = ({ active, onClose }) => {
         {active === "services" && activeSection.features && (
           <div className="grid grid-cols-1 gap-4">
             {activeSection.features.map((feature, i) => (
-              <div key={i} className="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="font-semibold text-blue-600 mb-1">{feature.title}</h3>
+              <Link
+                key={i}
+                to="/services"
+                onClick={onClose}
+                className="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow group cursor-pointer block"
+              >
+                <h3 className="font-semibold text-blue-600 mb-1 group-hover:underline flex items-center gap-2">
+                  {feature.title} <FiArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
-              </div>
+              </Link>
             ))}
           </div>
         )}
@@ -135,7 +159,14 @@ const MegaMenu = ({ active, onClose }) => {
             {data.sections.map((item, i) => {
               const Icon = item.icon;
               return (
-                <div key={i} className="flex items-center gap-3 p-3 hover:bg-blue-50 rounded-lg transition cursor-pointer">
+                <div
+                  key={i}
+                  onClick={() => {
+                    onClose();
+                    navigate("/company");
+                  }}
+                  className="flex items-center gap-3 p-3 hover:bg-blue-50 rounded-lg transition cursor-pointer"
+                >
                   <div className="p-2 bg-blue-100 rounded-lg">
                     {Icon && <Icon className="w-5 h-5 text-blue-600" />}
                   </div>
@@ -179,7 +210,14 @@ const MegaMenu = ({ active, onClose }) => {
           ))}
         </div>
 
-        <button className="mt-6 w-full bg-white text-black font-medium py-2 rounded-lg hover:bg-gray-200 transition">
+        <button
+          onClick={() => {
+            onClose();
+            const path = active === "services" ? "/services" : active === "company" ? "/company" : active === "platform" ? "/#platform" : "/solutions";
+            navigate(path);
+          }}
+          className="mt-6 w-full bg-white text-black font-medium py-2 rounded-lg hover:bg-gray-200 transition"
+        >
           {data.featured.button}
         </button>
       </div>

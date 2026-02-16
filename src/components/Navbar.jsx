@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import { FiSearch, FiChevronDown, FiArrowRight } from "react-icons/fi";
+import { FiSearch, FiChevronDown, FiArrowRight, FiMenu } from "react-icons/fi";
 import { useNavigate, Link } from "react-router-dom";
 import { Button } from "../ui/Button";
 import MegaMenu from "../ui/MegaMenu";
-import { navItems } from "../utils/menuData";
+import MobileSidebar from "../ui/MobileSidebar";
+import { navItems } from "../utils/menuData.js";
 import { useConsultation } from "./ConsultationContext.jsx";
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const { openConsultation } = useConsultation();
 
@@ -43,8 +45,8 @@ const Header = () => {
       </div>
 
       {/* ===== Main Nav ===== */}
-      <div className="bg-[#f3f4f6]/0 relative">
-        <div className="w-full flex flex-wrap items-center justify-between gap-3 px-4 sm:px-8 lg:px-20 py-1">
+      <div className="bg-transparent relative">
+        <div className="w-full flex items-center justify-between px-4 sm:px-8 lg:px-20 py-2">
           {/* Logo */}
           <div className="text-xl sm:text-2xl font-bold tracking-tight text-black">
             <Link to="/">
@@ -89,8 +91,19 @@ const Header = () => {
             })}
           </nav>
 
+          {/* Mobile Menu Icon */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="p-2 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl shadow-sm hover:bg-white hover:border-blue-300 transition-all active:scale-95 group"
+              aria-label="Open mobile menu"
+            >
+              <FiMenu className="w-7 h-7 text-blue-600 group-hover:text-blue-700" />
+            </button>
+          </div>
+
           {/* CTA Buttons */}
-          <div className="flex items-center gap-5">
+          <div className="hidden md:flex items-center gap-5">
             <Button
               variant="outline"
               rightIcon={<FiArrowRight className="w-4 h-4" />}
@@ -109,10 +122,10 @@ const Header = () => {
           </div>
         </div>
 
-        {/* ===== CENTERED MEGA MENU ===== */}
+        {/* Center Mega Menu */}
         {activeMenu && (
           <div
-            className="absolute left-1/2 -translate-x-1/2 top-full mt-6 z-50"
+            className="hidden md:block absolute left-1/2 -translate-x-1/2 top-full mt-6 z-50"
             onMouseEnter={() => setActiveMenu(activeMenu)}
             onMouseLeave={() => setActiveMenu(null)}
           >
@@ -120,6 +133,12 @@ const Header = () => {
           </div>
         )}
       </div>
+
+      {/* Mobile Sidebar */}
+      <MobileSidebar
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+      />
     </header>
   );
 };

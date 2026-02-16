@@ -31,9 +31,11 @@ function LandingPage() {
   )
 }
 
+import { ConsultationProvider } from "./components/ConsultationContext.jsx"
+
 function App() {
   return (
-    <>
+    <ConsultationProvider>
       <ScrollToTop />
       <Routes>
         <Route element={<MainLayout />}>
@@ -47,7 +49,7 @@ function App() {
       </Routes>
       <WhatsAppButton />
       <Chatbot />
-    </>
+    </ConsultationProvider>
   )
 }
 

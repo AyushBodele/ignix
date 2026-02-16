@@ -22,7 +22,7 @@ const leadership = [
   {
     name: "Aarav Nair",
     role: "Founder & Security Architect",
-    tag: "Threat modeling, zero‑trust evangelist",
+    tag: "Threat modeling, zero-trust evangelist",
   },
   {
     name: "Meera Kulkarni",
@@ -48,18 +48,12 @@ export default function Company() {
 
         <div className="relative mx-auto flex max-w-6xl flex-col gap-14 px-4 py-20 sm:px-8 sm:py-24 lg:flex-row lg:items-center">
           <div className="max-w-xl space-y-6">
-            <p
-              className="inline-flex items-center gap-2 rounded-full border border-slate-300/70 bg-white/70 px-4 py-1 text-[15px] font-semibold uppercase tracking-[0.2em] text-slate-700"
-              style={{ fontFamily: "var(--font-bebas)" }}
-            >
+            <p className="inline-flex items-center gap-2 rounded-full border border-slate-300/70 bg-white/70 px-4 py-1 text-[15px] font-semibold uppercase tracking-[0.2em] text-slate-700">
               <ShieldCheck className="h-7 w-7" />
               Ignix Social — Company
             </p>
 
-            <h1
-              className="text-4xl leading-tight sm:text-5xl lg:text-[3.4rem] lg:leading-[1.05]"
-              style={{ fontFamily: "var(--font-founders-grotesk)" }}
-            >
+            <h1 className="text-4xl leading-tight sm:text-5xl lg:text-[3.4rem] lg:leading-[1.05]">
               We build calm, secure{" "}
               <span className="bg-[linear-gradient(120deg,#0f172a,#0369a1)] bg-clip-text text-transparent">
                 digital ecosystems
@@ -164,16 +158,10 @@ export default function Company() {
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-8 sm:py-16">
           <div className="mb-8 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div>
-              <p
-                className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500"
-                style={{ fontFamily: "var(--font-bebas)" }}
-              >
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
                 Studio values
               </p>
-              <h2
-                className="mt-2 text-2xl sm:text-3xl"
-                style={{ fontFamily: "var(--font-founders-grotesk)" }}
-              >
+              <h2 className="mt-2 text-2xl sm:text-3xl">
                 How we like to work with you.
               </h2>
             </div>
@@ -190,10 +178,7 @@ export default function Company() {
                 className="border border-slate-200/80 bg-white/80 shadow-[0_18px_40px_rgba(15,23,42,0.05)]"
               >
                 <CardContent className="space-y-2 px-5 py-5">
-                  <p
-                    className="text-[13px] font-semibold uppercase tracking-[0.22em] text-slate-700"
-                    style={{ fontFamily: "var(--font-bebas)" }}
-                  >
+                  <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-slate-700">
                     {v.label}
                   </p>
                   <p className="text-sm text-slate-600">{v.body}</p>
@@ -209,16 +194,10 @@ export default function Company() {
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-8 sm:py-20">
           <div className="mb-10 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div>
-              <p
-                className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500"
-                style={{ fontFamily: "var(--font-bebas)" }}
-              >
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
                 Leadership
               </p>
-              <h2
-                className="mt-2 text-2xl sm:text-3xl"
-                style={{ fontFamily: "var(--font-founders-grotesk)" }}
-              >
+              <h2 className="mt-2 text-2xl sm:text-3xl">
                 The people behind the systems.
               </h2>
             </div>
@@ -256,4 +235,3 @@ export default function Company() {
     </div>
   );
 }
-

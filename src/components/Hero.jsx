@@ -1,13 +1,8 @@
 import { useEffect, useState } from "react";
-import { useHeadingAnimation } from "../hooks/heroAnimation";
 import HeroCarouselItem from "../carousel/HeroCarouselItem.jsx";
 import { slides } from "../utils/Data.js";
-import CyberHero from "../ui/CyberHero.jsx";
-import ServicesCarousel from "../carousel/ServicesCarousel.jsx";
-import AboutSection from "./AboutSection.jsx";
 
 const Hero = () => {
-  const headingVariants = useHeadingAnimation();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {

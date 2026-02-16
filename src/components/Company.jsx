@@ -91,7 +91,7 @@ export default function Company() {
               </div>
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4 text-slate-700" />
-                <span>Hybrid studio: Bengaluru · Berlin · Remote</span>
+                <span>Hybrid studio: Nagpur · Remote</span>
               </div>
             </div>
           </div>
@@ -145,7 +145,7 @@ export default function Company() {
                 </div>
                 <div className="hidden items-center gap-1 sm:flex">
                   <MapPin className="h-3.5 w-3.5" />
-                  <span>Nagpur · Berlin</span>
+                  <span>Nagpur</span>
                 </div>
               </footer>
             </div>

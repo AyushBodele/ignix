@@ -1,8 +1,8 @@
 // src/Layout/MainLayout.jsx
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import { Footer } from "../components/Footer";
-import { ConsultationProvider } from "../components/ConsultationContext";
+import Navbar from "../components/Navbar.jsx";
+import { Footer } from "../components/Footer.jsx";
+import { ConsultationProvider } from "../components/ConsultationContext.jsx";
 
 const MainLayout = () => {
   return (

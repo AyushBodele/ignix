@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { Shield, TrendingUp, Code, CheckCircle2, Clock, Users, Target, Zap, ArrowRight } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import { Outcomes } from './Outcomes.jsx';
-import { Button } from "../../ui/Button";
-import { Card } from "../../ui/Card";
-import { useConsultation } from "../ConsultationContext";
-import {ServicesHero} from "./ServicesHero"
+import { Button } from "../../ui/Button.jsx";
+import { Card } from "../../ui/Card.jsx";
+import { useConsultation } from "../ConsultationContext.jsx";
+import { ServicesHero } from "./ServicesHero.jsx"
 
 export default function Home() {
   const { openConsultation } = useConsultation();
@@ -21,13 +21,13 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <ServicesHero />
       {/* Hero Section */}
-     <Outcomes />
+      <Outcomes />
 
       {/* Core Services */}
       <section className="py-16 sm:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16">Our Core Services</h2>
-          
+
           <div className="grid gap-8 lg:gap-12 max-w-6xl mx-auto">
             {/* Cybersecurity */}
             <Card className="p-8 lg:p-12 bg-gradient-to-br from-card to-card/50 border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl">
@@ -128,7 +128,7 @@ export default function Home() {
               We're more than a service provider—we're your strategic partner in digital transformation.
             </p>
           </div>
-          
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               {
@@ -184,9 +184,9 @@ export default function Home() {
               Let's discuss how Ignix Social can help you secure your business, scale your reach, and succeed in the digital landscape.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                variant="secondary" 
+              <Button
+                size="lg"
+                variant="secondary"
                 className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-shadow"
                 onClick={openConsultation}
               >

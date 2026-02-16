@@ -1,18 +1,18 @@
 import React from "react"
 import { Routes, Route, Navigate } from "react-router-dom"
 
-import MainLayout from "./Layout/MainLayout"
-import Hero from "./components/Hero"
-import { PlatformSection } from "./components/PlatformSection"
-import { IndustrySection } from "./components/IndustrySection"
-import HomeServices from "./components/services/Home"
-import Company from "./components/Company"
-import SolutionTemplate from "./pages/solutions/SolutionTemplate"
+import MainLayout from "./Layout/MainLayout.jsx"
+import Hero from "./components/Hero.jsx"
+import { PlatformSection } from "./components/PlatformSection.jsx"
+import { IndustrySection } from "./components/IndustrySection.jsx"
+import HomeServices from "./components/services/Home.jsx"
+import Company from "./components/Company.jsx"
+import SolutionTemplate from "./pages/solutions/SolutionTemplate.jsx"
 
-import ScrollToTop from "./hooks/ScrollToTop"
-import WhatsAppButton from "./components/WhatsAppButton"
-import Chatbot from "./components/Chatbot"
-import OutroSection from "./components/OutroSection"
+import ScrollToTop from "./hooks/ScrollToTop.jsx"
+import WhatsAppButton from "./components/WhatsAppButton.jsx"
+import Chatbot from "./components/Chatbot.jsx"
+import OutroSection from "./components/OutroSection.jsx"
 
 
 function LandingPage() {

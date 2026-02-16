@@ -1,6 +1,6 @@
 import React from "react";
 import * as SelectPrimitive from "@radix-ui/react-select";
-import { cn } from "../components/Utils";
+import { cn } from "../components/Utils.jsx";
 import { ChevronDown, Check, ChevronUp } from "lucide-react";
 
 function Select({ ...props }) {

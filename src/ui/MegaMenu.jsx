@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
-import { menuData } from "../utils/menuData";
+import { menuData } from "../utils/menuData.js";
 
 const MegaMenu = ({ active, onClose }) => {
   const data = menuData[active];

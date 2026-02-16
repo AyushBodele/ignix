@@ -1,7 +1,7 @@
 import React from "react";
 import { Users, Globe2, ShieldCheck, Sparkles, HeartHandshake, MapPin } from "lucide-react";
-import { Button } from "../ui/Button";
-import { Card, CardContent } from "../ui/Card";
+import { Button } from "../ui/Button.jsx";
+import { Card, CardContent } from "../ui/Card.jsx";
 
 const values = [
   {

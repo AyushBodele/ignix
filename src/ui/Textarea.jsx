@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "../components/Utils";
+import { cn } from "../components/Utils.jsx";
 
 function Textarea({ className, ...props }) {
   return (

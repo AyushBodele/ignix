@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { useConsultation } from "../ConsultationContext";
+import { useConsultation } from "../ConsultationContext.jsx";
 
 export function ServicesHero() {
   const { openConsultation } = useConsultation();
@@ -32,9 +32,9 @@ export function ServicesHero() {
     >
       {/* Main content row */}
       <div className="w-full max-w-7xl flex items-center justify-between px-16 py-20 box-border gap-10 flex-wrap">
-        
+
         {/* LEFT — text */}
-        <div 
+        <div
           className="flex-1 min-w-[440px] max-w-[580px] transition-all duration-650 ease"
           style={{
             opacity: mounted ? 1 : 0,
@@ -52,7 +52,7 @@ export function ServicesHero() {
           </p>
 
           <div className="flex gap-5 flex-wrap items-center">
-            
+
             {/* Outline button — dark blue border for white bg */}
             <button
               onClick={openConsultation}
@@ -63,7 +63,7 @@ export function ServicesHero() {
 
             {/* Filled orange button */}
             <button
-            onClick={openConsultation}
+              onClick={openConsultation}
               className="inline-flex items-center gap-2 px-8 py-4 border-none rounded-full bg-[#faa226] text-white text-sm font-bold cursor-pointer tracking-wide transition-all duration-180 font-sans shadow-[0_4px_22px_rgba(250,162,38,0.25)] hover:bg-[#f09318] hover:-translate-y-0.5 hover:shadow-[0_6px_28px_rgba(250,162,38,0.35)]"
             >
               View Our Services <span className="text-base">→</span>
@@ -72,7 +72,7 @@ export function ServicesHero() {
         </div>
 
         {/* RIGHT — image */}
-        <div 
+        <div
           className="flex-1 min-w-[380px] max-w-[530px] min-h-[360px] flex items-center justify-center transition-all duration-850 delay-150"
           style={{
             opacity: mounted ? 1 : 0,
@@ -80,8 +80,8 @@ export function ServicesHero() {
             filter: 'drop-shadow(0 20px 35px rgba(0,0,0,0.08))'
           }}
         >
-          <img 
-            src="/images/services.png" 
+          <img
+            src="/images/services.png"
             alt="Ignix Social Services"
             className="w-full h-auto max-w-[500px] rounded-xl"
           />

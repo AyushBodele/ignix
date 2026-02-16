@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { FiCheck, FiArrowRight, FiPlay, FiDownload, FiShield } from 'react-icons/fi';
-import { Button } from '../../ui/Button';
+import { Button } from '../../ui/Button.jsx';
 import { solutionsData } from '../../data/solutionsData.jsx';
 
 const Section = ({ id, title, children, className = "" }) => (
@@ -39,8 +39,8 @@ const ImpactBlock = ({ title, points, image }) => (
                 className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group border border-gray-100"
             >
                 {image ? (
-                    <img 
-                        src={image} 
+                    <img
+                        src={image}
                         alt={title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         onError={(e) => {
@@ -189,9 +189,9 @@ const SolutionTemplate = () => {
     ];
 
     return (
-        <div 
+        <div
             key={slug}
-            className="bg-white min-h-screen font-sans selection:bg-blue-100" 
+            className="bg-white min-h-screen font-sans selection:bg-blue-100"
             style={{ fontFamily: theme.font }}
         >
             {/* 1️⃣ Hero CTA Section */}
@@ -201,7 +201,7 @@ const SolutionTemplate = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
                 className="relative overflow-hidden text-white"
-                style={{ 
+                style={{
                     backgroundColor: theme.primary,
                     minHeight: '85vh',
                 }}
@@ -209,62 +209,62 @@ const SolutionTemplate = () => {
                 {/* Layered Background Elements */}
                 <div className="absolute inset-0">
                     {/* Base gradient */}
-                    <div 
+                    <div
                         className="absolute inset-0"
-                        style={{ 
+                        style={{
                             background: `linear-gradient(135deg, ${theme.primary} 0%, ${theme.secondary} 100%)`,
                         }}
                     />
-                    
+
                     {/* Pattern overlay */}
-                    <div 
+                    <div
                         className="absolute inset-0 opacity-30"
-                        style={{ 
+                        style={{
                             backgroundImage: theme.pattern,
                             mixBlendMode: 'overlay',
                         }}
                     />
-                    
+
                     {/* Animated floating orbs */}
                     <motion.div
                         key={`orb1-${slug}`}
                         initial={{ opacity: 0, scale: 0 }}
-                        animate={{ 
-                            opacity: 0.3, 
+                        animate={{
+                            opacity: 0.3,
                             scale: 1,
                             y: [0, -30, 0],
                             x: [0, 20, 0],
                         }}
-                        transition={{ 
+                        transition={{
                             opacity: { duration: 1, delay: 0.2 },
                             scale: { duration: 1, delay: 0.2 },
                             y: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: 0.2 },
                             x: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: 0.2 }
                         }}
                         className="absolute top-20 right-20 w-96 h-96 rounded-full"
-                        style={{ 
+                        style={{
                             background: `radial-gradient(circle at 30% 30%, ${theme.accent}40, transparent 70%)`,
                             filter: 'blur(60px)',
                         }}
                     />
-                    
+
                     <motion.div
                         key={`orb2-${slug}`}
                         initial={{ opacity: 0, scale: 0 }}
-                        animate={{ 
-                            opacity: 0.2, 
+                        animate={{
+                            opacity: 0.2,
                             scale: 1,
                             y: [0, 40, 0],
                             x: [0, -30, 0]
                         }}
-                        transition={{ 
+                        transition={{
                             opacity: { duration: 1, delay: 0.4 },
                             scale: { duration: 1, delay: 0.4 },
                             y: { duration: 12, repeat: Infinity, ease: "easeInOut", delay: 0.4 },
                             x: { duration: 12, repeat: Infinity, ease: "easeInOut", delay: 0.4 }
                         }}
                         className="absolute bottom-20 left-20 w-80 h-80 rounded-full"
-                        style={{ 
+                        style={{
                             background: `radial-gradient(circle at 70% 70%, ${theme.accent}30, transparent 70%)`,
                             filter: 'blur(50px)',
                         }}
@@ -274,7 +274,7 @@ const SolutionTemplate = () => {
                 {/* Main Content */}
                 <div className="relative z-10 container mx-auto px-6 lg:px-26 h-[90vh] min-h-[500px] flex items-center">
                     <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
-                        
+
                         {/* Left Column - Text Content */}
                         <motion.div
                             key={`left-${slug}`}
@@ -291,7 +291,7 @@ const SolutionTemplate = () => {
                                 transition={{ delay: 0.2 }}
                                 className="mb-8"
                             >
-                                <span 
+                                <span
                                     className="text-sm tracking-[0.2em] uppercase font-medium"
                                     style={{ color: theme.accent }}
                                 >
@@ -332,7 +332,7 @@ const SolutionTemplate = () => {
                                 <Button
                                     size="lg"
                                     className="px-8 py-4 text-base font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
-                                    style={{ 
+                                    style={{
                                         backgroundColor: theme.accent,
                                         color: theme.primary,
                                     }}
@@ -340,13 +340,13 @@ const SolutionTemplate = () => {
                                 >
                                     Learn More →
                                 </Button>
-                                
+
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className="flex items-center gap-3 group px-6 py-4"
                                 >
-                                    <div 
+                                    <div
                                         className="w-10 h-10 rounded-full flex items-center justify-center border"
                                         style={{ borderColor: theme.accent }}
                                     >
@@ -357,7 +357,7 @@ const SolutionTemplate = () => {
                             </motion.div>
 
                             {/* Stats */}
-                            <motion.div 
+                            <motion.div
                                 key={`stats-${slug}`}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -366,7 +366,7 @@ const SolutionTemplate = () => {
                             >
                                 {['Zero Trust', 'Real-time', 'Automated'].map((stat, i) => (
                                     <div key={i} className="relative">
-                                        <div 
+                                        <div
                                             className="text-2xl font-bold mb-1"
                                             style={{ color: theme.accent }}
                                         >
@@ -388,14 +388,14 @@ const SolutionTemplate = () => {
                         >
                             {/* Image Container */}
                             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                                <img 
-                                    src={data.hero.image} 
+                                <img
+                                    src={data.hero.image}
                                     alt={data.hero.title}
                                     className="w-full h-full object-cover"
                                 />
-                                <div 
+                                <div
                                     className="absolute inset-0"
-                                    style={{ 
+                                    style={{
                                         background: `linear-gradient(135deg, ${theme.accent}20, transparent)`,
                                         mixBlendMode: 'overlay'
                                     }}
@@ -407,7 +407,7 @@ const SolutionTemplate = () => {
                                 key={`card1-${slug}`}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: [0, -10, 0] }}
-                                transition={{ 
+                                transition={{
                                     opacity: { delay: 0.7, duration: 0.5 },
                                     y: { delay: 0.7, duration: 4, repeat: Infinity, ease: "easeInOut" }
                                 }}
@@ -422,7 +422,7 @@ const SolutionTemplate = () => {
                                 key={`card2-${slug}`}
                                 initial={{ opacity: 0, y: -20 }}
                                 animate={{ opacity: 1, y: [0, 10, 0] }}
-                                transition={{ 
+                                transition={{
                                     opacity: { delay: 0.8, duration: 0.5 },
                                     y: { delay: 0.8, duration: 5, repeat: Infinity, ease: "easeInOut" }
                                 }}
@@ -475,8 +475,8 @@ const SolutionTemplate = () => {
                             >
                                 <div className="absolute inset-0">
                                     {data.video.thumbnail ? (
-                                        <img 
-                                            src={data.video.thumbnail} 
+                                        <img
+                                            src={data.video.thumbnail}
                                             alt={data.video.videoTitle}
                                             className="w-full h-full object-cover"
                                             onError={(e) => {

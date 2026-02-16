@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../ui/Button";
-import { servicesSlides } from "../utils/Data";
+import { Button } from "../ui/Button.jsx";
+import { servicesSlides } from "../utils/Data.js";
 
 export default function ServicesCarousel() {
   const navigate = useNavigate();
@@ -61,13 +61,12 @@ export default function ServicesCarousel() {
 
           {/* Slide Content */}
           <div
-            className={`flex flex-col md:flex-row items-stretch gap-12 transition-all duration-300 ${
-              animating
+            className={`flex flex-col md:flex-row items-stretch gap-12 transition-all duration-300 ${animating
                 ? direction === "right"
                   ? "opacity-0 -translate-x-7"
                   : "opacity-0 translate-x-7"
                 : "opacity-100 translate-x-0"
-            }`}
+              }`}
           >
             {/* Image Panel */}
             <div className="md:w-80 flex-shrink-0">
@@ -124,11 +123,10 @@ export default function ServicesCarousel() {
             <button
               key={i}
               onClick={() => goTo(i)}
-              className={`transition-all duration-300 rounded-full ${
-                i === current
+              className={`transition-all duration-300 rounded-full ${i === current
                   ? `w-8 h-2 ${slide.accentSolid}`
                   : "w-2.5 h-2.5 bg-gray-300"
-              }`}
+                }`}
             />
           ))}
         </div>

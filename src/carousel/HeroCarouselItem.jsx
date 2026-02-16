@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import {heroCards} from "../utils/Data";
+import { heroCards } from "../utils/Data.js";
 
 const HeroCarouselItem = ({ slideIndex, slide }) => {
   const activeIndex = slideIndex % heroCards.length;
@@ -71,18 +71,16 @@ const HeroCarouselItem = ({ slideIndex, slide }) => {
                   key={i}
                   className={`relative rounded-xl p-6 overflow-hidden backdrop-blur-xl
                     transition-all duration-300
-                    ${
-                      isActive
-                        ? "bg-emerald-950/40 border border-emerald-400/60 shadow-[0_0_30px_rgba(52,211,153,0.4)]"
-                        : "bg-black/40 border border-white/15"
+                    ${isActive
+                      ? "bg-emerald-950/40 border border-emerald-400/60 shadow-[0_0_30px_rgba(52,211,153,0.4)]"
+                      : "bg-black/40 border border-white/15"
                     }`}
                 >
                   <p
                     className={`uppercase tracking-wider font-semibold mb-3 text-xs
-                      ${
-                        isActive
-                          ? "text-emerald-400"
-                          : "text-gray-300"
+                      ${isActive
+                        ? "text-emerald-400"
+                        : "text-gray-300"
                       }`}
                   >
                     {card.eyebrow}
@@ -98,10 +96,9 @@ const HeroCarouselItem = ({ slideIndex, slide }) => {
 
                   <div
                     className={`absolute bottom-0 left-0 w-full h-1
-                      ${
-                        isActive
-                          ? "bg-emerald-400"
-                          : "bg-white/20"
+                      ${isActive
+                        ? "bg-emerald-400"
+                        : "bg-white/20"
                       }`}
                   />
                 </div>

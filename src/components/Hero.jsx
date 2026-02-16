@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useHeadingAnimation } from "../hooks/heroAnimation";
-import HeroCarouselItem from "../carousel/HeroCarouselItem";
-import { slides } from "../utils/Data";
-import CyberHero from "../ui/CyberHero";
-import ServicesCarousel from "../carousel/ServicesCarousel";
-import AboutSection from "./AboutSection";
+import HeroCarouselItem from "../carousel/HeroCarouselItem.jsx";
+import { slides } from "../utils/Data.js";
+import CyberHero from "../ui/CyberHero.jsx";
+import ServicesCarousel from "../carousel/ServicesCarousel.jsx";
+import AboutSection from "./AboutSection.jsx";
 
 const Hero = () => {
   const headingVariants = useHeadingAnimation();

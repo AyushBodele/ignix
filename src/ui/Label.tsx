@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Root as LabelPrimitiveRoot } from "@radix-ui/react-label";
-import { cn } from "../components/Utils";
+import { cn } from "../components/Utils.jsx";
 
 function Label({ className = "", ...props }) {
   return (

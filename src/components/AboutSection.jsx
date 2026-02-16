@@ -1,8 +1,8 @@
 import React from "react";
-import CircularText from "../hooks/CircularText";
-import { useConsultation } from "./ConsultationContext";
+import CircularText from "../hooks/CircularText.jsx";
+import { useConsultation } from "./ConsultationContext.jsx";
 
-import { Button } from "../ui/Button"; // adjust path if needed
+import { Button } from "../ui/Button.jsx"; // resort to explicit extension
 
 const AboutSection = () => {
   const { openConsultation } = useConsultation();

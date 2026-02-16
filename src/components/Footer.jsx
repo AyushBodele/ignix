@@ -1,5 +1,5 @@
 import { Linkedin, Twitter, Youtube, Github } from 'lucide-react';
-import { footerSections } from '../utils/Data';
+import { footerSections } from '../utils/Data.js';
 export function Footer() {
 
 
@@ -16,15 +16,15 @@ export function Footer() {
               <span className="text-xl font-semibold text-white">Ignix Social</span>
             </div>
             <p className="text-sm text-gray-400 mb-6 max-w-sm">
-             Ignix Social fuses security-first digital power—blending cyber shields, web wizardry, SEO mastery, and performance marketing to rocket businesses online while safeguarding platforms, data, and trust with smart, boundless tech.
+              Ignix Social fuses security-first digital power—blending cyber shields, web wizardry, SEO mastery, and performance marketing to rocket businesses online while safeguarding platforms, data, and trust with smart, boundless tech.
             </p>
-            
+
             {/* Newsletter */}
             <div className="mb-6">
               <h4 className="text-white font-medium mb-3 text-sm">Subscribe for expert tips</h4>
               <div className="flex gap-2">
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm focus:outline-none focus:border-cyan-500"
                 />
@@ -42,8 +42,8 @@ export function Footer() {
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                     >
                       {link}

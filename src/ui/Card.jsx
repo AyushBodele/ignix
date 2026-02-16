@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "../components/Utils";
+import { cn } from "../components/Utils.jsx";
 
 function Card({ className, size = "default", ...props }) {
   return (

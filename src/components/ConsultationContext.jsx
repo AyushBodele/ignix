@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useState } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "../ui/Dialog";
-import ConsultationForm from "./services/ConsultationForm";
+import ConsultationForm from "./services/ConsultationForm.jsx";
 
 const ConsultationContext = createContext({
-  openConsultation: () => {},
+  openConsultation: () => { },
 });
 
 export const useConsultation = () => useContext(ConsultationContext);

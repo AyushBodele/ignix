@@ -4,7 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { Button } from "../ui/Button";
 import MegaMenu from "../ui/MegaMenu";
 import { navItems } from "../utils/menuData";
-import { useConsultation } from "./ConsultationContext";
+import { useConsultation } from "./ConsultationContext.jsx";
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null);

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Button } from "../../ui/Button";
-import { Input } from "../../ui/Input";
-import { Label } from "../../ui/Label";
-import { Textarea } from "../../ui/Textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../ui/Select";
+import { Button } from "../../ui/Button.jsx";
+import { Input } from "../../ui/Input.jsx";
+import { Label } from "../../ui/Label.tsx";
+import { Textarea } from "../../ui/Textarea.jsx";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../ui/Select.jsx";
 import { CheckCircle2 } from 'lucide-react';
 
 export default function ConsultationForm({ onSuccess }) {

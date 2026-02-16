@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Root as LabelPrimitiveRoot } from "@radix-ui/react-label";
-import { cn } from "../Components/Utils";
+import { cn } from "../components/Utils";
 
-function Label({ className="", ...props }) {
+function Label({ className = "", ...props }) {
   return (
     <LabelPrimitiveRoot
       data-slot="label"

@@ -1,6 +1,6 @@
 import React from "react";
 import CircularText from "../hooks/CircularText";
-import { useConsultation } from "./ConsultationContext";
+import { useConsultation } from "./ConsultationContex";
 import { Button } from "../ui/Button"; // adjust path if needed
 
 const AboutSection = () => {
@@ -9,10 +9,10 @@ const AboutSection = () => {
   return (
     <section className="relative w-full min-h-screen lg:min-h-[85vh] bg-[#0f172b] text-white flex items-center">
       <div className="w-full px-6 sm:px-8 md:px-16 lg:px-24 py-16 md:py-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-12">
-        
+
         {/* Left Side */}
         <div className="space-y-6 md:space-y-8 max-w-full md:max-w-4xl">
-          
+
           {/* Badge */}
           <div className="inline-flex items-center gap-3 bg-indigo-900/40 backdrop-blur-sm border border-indigo-700/50 rounded-full px-5 py-2.5 flex-wrap">
             <svg

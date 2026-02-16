@@ -2,17 +2,17 @@ import React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 
 import MainLayout from './Layout/MainLayout'
-import Hero from './Components/Hero'
-import { PlatformSection } from './Components/PlatformSection'
-import { IndustrySection } from './Components/IndustrySection'
-import HomeServices from './Components/services/Home'
-import Company from './Components/Company'
+import Hero from './components/Hero'
+import { PlatformSection } from './components/PlatformSection'
+import { IndustrySection } from './components/IndustrySection'
+import HomeServices from './components/services/Home'
+import Company from './components/Company'
 import SolutionTemplate from './pages/solutions/SolutionTemplate'
 
 import ScrollToTop from './hooks/ScrollToTop'
-import WhatsAppButton from './Components/WhatsAppButton'
-import Chatbot from './Components/Chatbot'
-import OutroSection from './Components/OutroSection'
+import WhatsAppButton from './components/WhatsAppButton'
+import Chatbot from './components/Chatbot'
+import OutroSection from "./components/OutroSection"
 
 
 function LandingPage() {

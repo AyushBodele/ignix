@@ -9,18 +9,12 @@ export default function CyberHero() {
             {/* LEFT CONTENT */}
             <div className="max-w-2xl">
               <h1 className="text-4xl lg:text-4xl font-semibold text-indigo-900 leading-tight mb-5">
-                Accelerating Cybersecurity <br />
-                Transformation at Scale
+                Architecting Supreme Enterprise <br />
+                Cybersecurity Evolution at Scale
               </h1>
 
-              <p className="text-gray-600 leading-relaxed text-base">
-                We empower organizations to accelerate their cybersecurity transformation at scale.
-                With our expertise, we help you design, implement, and sustain customized
-                cybersecurity programs that seamlessly align with your business goals.
-                Our solutions span various domains, offering the complete spectrum of services
-                required to build strong security foundations and overcome compliance challenges.
-                Our seasoned experts are dedicated to delivering top-notch solutions designed to
-                protect your business and ensure your continuous growth.
+              <p className="text-gray-600 leading-relaxed text-base text-justify">
+                Ignix Social accelerates cybersecurity transformation for large enterprises by delivering strategic, end-to-end protection built for scale and resilience. Our team of seasoned experts applies proven frameworks and advanced security methodologies to design systems that are both robust and future-ready. We identify and remediate critical vulnerabilities, strengthen risk management processes, and embed security into every layer of your digital infrastructure. Through continuous monitoring and intelligent threat response, we help organizations stay ahead of evolving cyber risks.
               </p>
             </div>
 

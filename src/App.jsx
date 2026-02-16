@@ -8,22 +8,22 @@ import { IndustrySection } from './Components/IndustrySection'
 import HomeServices from './Components/services/Home'
 import Company from './Components/Company'
 import SolutionTemplate from './pages/solutions/SolutionTemplate'
+
+import ScrollToTop from './hooks/ScrollToTop'
+import WhatsAppButton from './Components/WhatsAppButton'
+import Chatbot from './Components/Chatbot'
 import OutroSection from './Components/OutroSection'
 
 function LandingPage() {
   return (
     <>
       <Hero />
-      <OutroSection/>
+      <OutroSection />
       <PlatformSection />
       <IndustrySection />
     </>
   )
 }
-
-import ScrollToTop from './hooks/ScrollToTop'
-import WhatsAppButton from './Components/WhatsAppButton'
-import Chatbot from './Components/Chatbot'
 
 function App() {
   return (

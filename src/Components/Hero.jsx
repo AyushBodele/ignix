@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useHeadingAnimation } from "../hooks/heroAnimation";
 import HeroCarouselItem from "../carousel/HeroCarouselItem";
-import {slides} from "../utils/Data";
+import { slides } from "../utils/Data";
 import CyberHero from "../ui/CyberHero";
 import ServicesCarousel from "../carousel/ServicesCarousel";
-import AboutSection from "./Aboutsection";
+import AboutSection from "./AboutSection";
 
 const Hero = () => {
   const headingVariants = useHeadingAnimation();
@@ -27,9 +27,9 @@ const Hero = () => {
       />
 
       <div>
-        <CyberHero/>
-        <AboutSection/>
-        <ServicesCarousel/>
+        <CyberHero />
+        <AboutSection />
+        <ServicesCarousel />
       </div>
     </div>
   );

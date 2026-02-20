@@ -6,8 +6,9 @@ import Hero from "./components/Hero.jsx"
 import { PlatformSection } from "./components/PlatformSection.jsx"
 import { IndustrySection } from "./components/IndustrySection.jsx"
 import HomeServices from "./components/services/Home.jsx"
-import Company from "./components/Company.jsx"
+import Company from "./components/Career.jsx"
 import SolutionTemplate from "./pages/solutions/SolutionTemplate.jsx"
+import JobDescriptionPage from "./components/JobDescription.jsx"
 
 import ScrollToTop from "./hooks/ScrollToTop.jsx"
 import WhatsAppButton from "./components/WhatsAppButton.jsx"
@@ -45,6 +46,7 @@ function App() {
           <Route path="/company" element={<Company />} />
           <Route path="/solutions" element={<Navigate to="/solutions/safe-ai" replace />} />
           <Route path="/solutions/:slug" element={<SolutionTemplate />} />
+          <Route path="/job-description/:slug" element={<JobDescriptionPage />} />
           <Route path="*" element={<p className="p-8 text-center">Page not found.</p>} />
         </Route>
       </Routes>
